@@ -1,0 +1,4 @@
+O Gitflow é um modelo de ramificação (branching) para o Git, criado por Vincent Driessen em 2010,
+que visa organizar o versionamento de código em projetos de software com ciclos de lançamento agendados.
+ Ele define um conjunto de branches com funções específicas — como develop para o desenvolvimento contínuo e master para versões estáveis — e estabelece
+um fluxo de trabalho para a criação de novas funcionalidades (feature), correções de emergência (hotfix) e preparação de novas versões
