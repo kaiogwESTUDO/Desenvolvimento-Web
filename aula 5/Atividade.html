@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    .user_pass_fail {
+        border:  3px solid red;
+    }
+</style>
+
+<script>
+    function validaUsuario() {
+        let usuário = document.getElementById("usuario");
+        let senha = document.getElementById("senha");
+
+        if (usuario.value == "user" && senha.value == "pass"){
+        alert("Login Ok!");} 
+    else {
+        usuario.classList.add("user_pass_fail");
+        senha.classList.add("user_pass_fail");
+        }
+    }
+</script>
+
+</head>
+<body>
+    <fieldset>
+        <label for="usuario">Usuário</label>
+        <input id="usuario" type="text" name="usuario" required>
+    </fieldset>
+    <fieldset>
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" name="senha" required>
+    </fieldset>
+        
+    
+</body>
+</html>
