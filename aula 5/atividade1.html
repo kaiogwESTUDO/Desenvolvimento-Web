@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+
+    <h2>Calculadora Simples</h2>
+
+    <input type="number" id="n1"> 
+    <select id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="n2">
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado">Resultado aqui</p>
+
+    <script>
+        function calcular(){
+            var v1 = parseFloat(document.getElementById("n1").value);
+            var v2 = parseFloat(document.getElementById("n2").value);
+            var op = document.getElementById("op").value;
+            var res;
+
+            if(op==="+"){
+                res = v1+v2;
+            } else if(op==="-"){
+                res = v1-v2;
+            } else if(op==="*"){
+                res = v1*v2;
+            } else if(op==="/"){
+                if(v2===0){
+                    document.getElementById("resultado").innerText = "Não pode dividir por 0";
+                    document.getElementById("resultado").style.background = "red";
+                    return;
+                }
+                res = v1/v2;
+            }
+
+            var campo = document.getElementById("resultado");
+            campo.innerText = "Resultado: "+res;
+
+            if(res>0){
+                campo.style.background = "green";
+            } else if(res<0){
+                campo.style.background = "red";
+            } else {
+                campo.style.background = "gray";
+            }
+        }
+    </script>
+
+</body>
+</html>
